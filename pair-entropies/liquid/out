@@ -1,0 +1,72 @@
+
+DRIVER: Found molfile format trajectory dcd with name out.dcd
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.4.0-dev (git: 6547e1e-dirty) compiled on Apr 17 2017 at 21:43:58
+PLUMED: Please cite this paper when using PLUMED [1]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /local-3-ssd/piaggp/Programs/Plumed/plumed2-fork/
+PLUMED: For installed feature, see /local-3-ssd/piaggp/Programs/Plumed/plumed2-fork//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 256
+PLUMED: File suffix: 
+PLUMED: FILE: plumed.dat
+PLUMED: Action PAIRENTROPY
+PLUMED:   with label s2
+PLUMED:   keyword SPECIES takes atoms : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+PLUMED:   added component to this action:  s2.mean 
+PLUMED:   value s2.mean contains the mean value
+PLUMED: Setting cut off to 0.625000 
+PLUMED:  Action LOCAL_AVERAGE
+PLUMED:   with label s2a
+PLUMED:   averaging over central molecule and those within 0.35.  Using rational swiching function with parameters d0=0 nn=6 mm=12
+PLUMED:   keyword SPECIES takes dynamic groups of atoms constructed from multicolvars labelled : s2 
+PLUMED:   added component to this action:  s2a.mean 
+PLUMED:   value s2a.mean contains the mean value
+PLUMED: Action HISTOGRAM
+PLUMED:   with label hhS
+PLUMED:   with stride 1
+PLUMED:   weights are all equal to one
+PLUMED:   for all base quantities calculated by s2 
+PLUMED:   grid of 401 equally spaced points between (-5) and (0.)
+PLUMED: Action DUMPGRID
+PLUMED:   with label @3
+PLUMED:   with stride 100
+PLUMED:   outputting grid calculated by action hhS to file named histoS with format %f 
+PLUMED: Action HISTOGRAM
+PLUMED:   with label hhSe
+PLUMED:   with stride 1
+PLUMED:   weights are all equal to one
+PLUMED:   for all base quantities calculated by s2a 
+PLUMED:   grid of 401 equally spaced points between (-5) and (0.)
+PLUMED: Action DUMPGRID
+PLUMED:   with label @5
+PLUMED:   with stride 100
+PLUMED:   outputting grid calculated by action hhSe to file named histoSa with format %f 
+PLUMED: Action PRINT
+PLUMED:   with label @6
+PLUMED:   with stride 1
+PLUMED:   with arguments s2.mean s2a.mean
+PLUMED:   on file COLVAR
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minumum      Maximum
+PLUMED:                                                    1     5.060322     5.060322     5.060322     5.060322
+PLUMED: 1 Prepare dependencies                           201     0.000197     0.000001     0.000001     0.000006
+PLUMED: 2 Sharing data                                   201     0.001542     0.000008     0.000007     0.000023
+PLUMED: 3 Waiting for data                               201     0.000120     0.000001     0.000000     0.000007
+PLUMED: 4 Calculating (forward loop)                     201     4.784947     0.023806     0.023000     0.026399
+PLUMED: 5 Applying (backward loop)                       201     0.001187     0.000006     0.000004     0.000077
+PLUMED: 6 Update                                         201     0.269142     0.001339     0.000021     0.003709
