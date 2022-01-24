@@ -1,0 +1,15 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.4.0-dev (git: 6547e1e-dirty) compiled on Apr 17 2017 at 21:43:58
+PLUMED: Please cite this paper when using PLUMED [1]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /local-3-ssd/piaggp/Programs/Plumed/plumed2-fork/
+PLUMED: For installed feature, see /local-3-ssd/piaggp/Programs/Plumed/plumed2-fork//src/config/config.txt
+PLUMED: Molecular dynamics engine: LAMMPS
+PLUMED: Precision of reals: 8
+PLUMED: Running over 4 nodes
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 2048
+PLUMED: GROMACS-like replica exchange is on
+PLUMED: File suffix: .0
+PLUMED: FILE: plumed.dat

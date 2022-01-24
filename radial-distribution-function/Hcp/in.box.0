@@ -1,0 +1,9 @@
+variable        mass equal 26.981539
+lattice         hcp 2.86
+region          box block 0 12 0 7 0 7 units lattice
+create_box      1 box
+create_atoms    1 box
+mass            1 ${mass}
+change_box      all triclinic
+
+
