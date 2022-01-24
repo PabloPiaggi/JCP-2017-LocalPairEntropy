@@ -1,0 +1,28 @@
+set terminal postscript enhanced "Helvetica" 30
+set output "plot.ps"
+
+set style line 1 lt 1 lw 4 lc rgb 'orange'
+#set style line 2 lt 1 lw 4 lc rgb 'blue'
+#set style line 3 lt 1 lw 4 lc rgb 'red'
+#set style line 4 lt 1 lw 4 lc rgb 'black'
+set style line 5 pt 5 ps 2 lc rgb 'orange'
+#set style line 6 pt 7 ps 2 lc rgb 'blue'
+#set style line 7 pt 9 ps 2 lc rgb 'red'
+set style line 8 pt 11 ps 2 lc rgb 'black'
+
+f(x)=(1./(x*sigma*sqrt(2.*pi)))*exp(-(log(x)-mu)**2/(2.*sigma**2))
+#set fit quiet
+fit f(x) "graindistrib.dat" using 1:2 via sigma, mu
+b=exp(mu+(sigma**2)/2)
+print "Mean grain size is ", b
+
+set xrange [20:80]
+set yrange [0:0.1]
+set xlabel "Grain size"
+set ylabel "Frequency"
+#set key top right
+set xtics 10
+set ytics 0.02
+#set size square
+plot "graindistrib.dat" using 1:2 notitle with points linestyle 5, \
+	f(x) notitle with lines linestyle 1

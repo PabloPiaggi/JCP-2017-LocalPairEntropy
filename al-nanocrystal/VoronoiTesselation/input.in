@@ -1,0 +1,13 @@
+avgGrainSize	50
+latticeConst	4.046
+caRatio		1.63299
+bravaisLat	f c c
+regionCells	40	40	40
+cells		20	20	20
+rCut		1.0
+rCutGrain	0.
+grainCellsFactor	2.0
+stepGD		5.
+rangeGD		80.
+massIn		26.981539
+randSeedP	17
